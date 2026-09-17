@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Contact</title>
+<meta name="description" content="Get in touch about projects or tutoring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ TOP RIBBON — same on every page, keep in sync ============ -->
+<header class="topnav">
+  <a href="index.html" class="brand">Your Name</a>
+  <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+  <ul>
+    <li><a class="nav-link" href="index.html">About Me</a></li>
+    <li><a class="nav-link" href="projects.html">Projects</a></li>
+    <li><a class="nav-link" href="tutoring.html">Tutoring</a></li>
+    <li><a class="nav-link active" href="contact.html">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+  <section id="contact">
+    <p class="eyebrow-num">03</p>
+    <h2 class="section-title">Get in touch</h2>
+    <p class="section-lede">Whether it's a project question or a tutoring enquiry, the quickest way to reach me is below.</p>
+
+    <div class="contact-row">
+      <!--
+        CONFIG: This form uses Netlify Forms, which works free the moment
+        this site is deployed on Netlify — no backend needed.
+        If you deploy elsewhere (e.g. GitHub Pages), remove the
+        data-netlify="true" attribute and instead point the form at a
+        service like Formspree, or just direct people to email you.
+      -->
+      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" type="text" name="name" required>
+        <label for="cf-email">Email</label>
+        <input id="cf-email" type="email" name="email" required>
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+
+      <div class="contact-direct">
+        <p>Prefer email or LinkedIn directly? Here you go:</p>
+        <!-- CONFIG: your details -->
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Your Name. Built and maintained by hand.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

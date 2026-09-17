@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Projects</title>
+<meta name="description" content="Projects in finance, modelling, and competitions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ TOP RIBBON — same on every page, keep in sync ============ -->
+<header class="topnav">
+  <a href="index.html" class="brand">Your Name</a>
+  <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+  <ul>
+    <li><a class="nav-link" href="index.html">About Me</a></li>
+    <li><a class="nav-link active" href="projects.html">Projects</a></li>
+    <li><a class="nav-link" href="tutoring.html">Tutoring</a></li>
+    <li><a class="nav-link" href="contact.html">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+  <section id="projects">
+    <p class="eyebrow-num">01</p>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-lede">A selection of work across finance, modelling, and competitions. Filter by category, or read through the full list.</p>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="finance">Finance</button>
+      <button class="filter-btn" data-filter="modelling">Modelling</button>
+      <button class="filter-btn" data-filter="competitions">Competitions</button>
+    </div>
+
+    <div class="ledger">
+      <!-- CONFIG: duplicate a .ledger-row block per project. data-cat matches a filter button's data-filter -->
+      <div class="ledger-row" data-cat="finance">
+        <p class="ledger-index">01</p>
+        <div>
+          <h3 class="ledger-title">Project title goes here</h3>
+          <p class="ledger-desc">One or two sentences on what the project was, what you built or analysed, and the outcome or result.</p>
+          <div class="ledger-tags"><span>Finance</span><span>Excel / Python</span></div>
+        </div>
+        <a class="ledger-link" href="#" target="_blank" rel="noopener">View →</a>
+      </div>
+
+      <div class="ledger-row" data-cat="modelling">
+        <p class="ledger-index">02</p>
+        <div>
+          <h3 class="ledger-title">Project title goes here</h3>
+          <p class="ledger-desc">One or two sentences describing the modelling approach, the tools used, and what it was built to test or predict.</p>
+          <div class="ledger-tags"><span>Modelling</span><span>Python</span></div>
+        </div>
+        <a class="ledger-link" href="#" target="_blank" rel="noopener">View →</a>
+      </div>
+
+      <div class="ledger-row" data-cat="competitions">
+        <p class="ledger-index">03</p>
+        <div>
+          <h3 class="ledger-title">Competition name and placement</h3>
+          <p class="ledger-desc">What the competition involved, your role in the team, and the result you achieved.</p>
+          <div class="ledger-tags"><span>Competitions</span><span>Team of 4</span></div>
+        </div>
+        <a class="ledger-link" href="#" target="_blank" rel="noopener">View →</a>
+      </div>
+
+      <div class="ledger-row" data-cat="finance">
+        <p class="ledger-index">04</p>
+        <div>
+          <h3 class="ledger-title">Project title goes here</h3>
+          <p class="ledger-desc">One or two sentences on what the project was, what you built or analysed, and the outcome or result.</p>
+          <div class="ledger-tags"><span>Finance</span><span>Valuation</span></div>
+        </div>
+        <a class="ledger-link" href="#" target="_blank" rel="noopener">View →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Your Name. Built and maintained by hand.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

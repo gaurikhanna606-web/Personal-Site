@@ -1,0 +1,352 @@
+/* ============================================================
+   EDIT-ME QUICK REFERENCE
+   Colors, fonts, and spacing all live here — one edit updates
+   every page, since about.html / projects.html / tutoring.html /
+   contact.html all link to this same file.
+   ============================================================ */
+
+:root{
+  --paper:#F7F6F2;
+  --ink:#1C1E22;
+  --ink-soft:#565B63;
+  --line:#DCDAD3;
+  --accent:#2F5D50;   /* deep emerald — used sparingly */
+  --accent-soft:#E4ECE9;
+  --gold:#9C7A3C;      /* secondary accent, tutoring section only */
+  --gold-soft:#F1E8D8;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;}
+img{max-width:100%;}
+
+/* ---------- Top ribbon ---------- */
+.topnav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1180px;
+  margin:0 auto;
+  padding:22px 40px;
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
+.topnav .brand{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.15rem;
+  text-decoration:none;
+  color:var(--ink);
+}
+.topnav ul{
+  list-style:none;
+  display:flex;
+  gap:28px;
+  margin:0;
+  padding:0;
+}
+.topnav a.nav-link{
+  text-decoration:none;
+  font-size:0.92rem;
+  color:var(--ink-soft);
+  border-bottom:2px solid transparent;
+  padding-bottom:4px;
+  transition:color .15s ease, border-color .15s ease;
+}
+.topnav a.nav-link:hover,
+.topnav a.nav-link.active{
+  color:var(--ink);
+  border-bottom-color:var(--accent);
+}
+.nav-toggle{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:6px 10px;
+  font-size:0.9rem;
+  cursor:pointer;
+}
+
+/* ---------- Page shell ---------- */
+main{
+  max-width:1180px;
+  margin:0 auto;
+  padding:64px 40px 100px;
+}
+section{scroll-margin-top:40px;}
+section + section{margin-top:96px;}
+
+.eyebrow-num{
+  font-family:var(--serif);
+  color:var(--ink-soft);
+  font-size:0.85rem;
+  margin:0 0 8px;
+}
+h1.hero-line{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(1.9rem, 3.4vw, 2.6rem);
+  line-height:1.25;
+  max-width:26ch;
+  margin:0 0 22px;
+}
+.hero-body{
+  max-width:58ch;
+  color:var(--ink-soft);
+  font-size:1.02rem;
+  margin:0 0 28px;
+}
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.hero-tags span{
+  font-size:0.82rem;
+  padding:6px 12px;
+  border:1px solid var(--line);
+  border-radius:3px;
+  color:var(--ink-soft);
+}
+
+h2.section-title{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.7rem;
+  margin:0 0 8px;
+}
+.section-lede{
+  color:var(--ink-soft);
+  max-width:60ch;
+  margin:0 0 36px;
+}
+
+/* ---- About page extras ---- */
+.about-body p{
+  max-width:65ch;
+  color:var(--ink-soft);
+  margin:0 0 18px;
+}
+.about-body p:first-child{
+  color:var(--ink);
+  font-size:1.05rem;
+}
+
+/* ---- Project ledger ---- */
+.filters{
+  display:flex;
+  gap:8px;
+  margin-bottom:28px;
+}
+.filter-btn{
+  font-family:var(--sans);
+  font-size:0.85rem;
+  background:none;
+  border:1px solid var(--line);
+  color:var(--ink-soft);
+  padding:7px 14px;
+  border-radius:3px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.filter-btn:hover{border-color:var(--accent);}
+.filter-btn.active{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+
+.ledger{border-top:1px solid var(--line);}
+.ledger-row{
+  display:grid;
+  grid-template-columns: 48px 1fr auto;
+  gap:24px;
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+  transition:opacity .2s ease;
+}
+.ledger-row.hidden{display:none;}
+.ledger-index{
+  font-family:var(--serif);
+  color:var(--ink-soft);
+  font-size:0.95rem;
+  padding-top:2px;
+}
+.ledger-title{
+  font-family:var(--serif);
+  font-size:1.1rem;
+  font-weight:600;
+  margin:0 0 6px;
+}
+.ledger-desc{
+  color:var(--ink-soft);
+  font-size:0.95rem;
+  max-width:55ch;
+  margin:0 0 10px;
+}
+.ledger-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.ledger-tags span{
+  font-size:0.75rem;
+  color:var(--accent);
+  background:var(--accent-soft);
+  padding:3px 9px;
+  border-radius:3px;
+}
+.ledger-link{
+  font-size:0.85rem;
+  text-decoration:none;
+  color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding-bottom:2px;
+  white-space:nowrap;
+  align-self:center;
+}
+.ledger-link:hover{color:var(--accent); border-color:var(--accent);}
+
+/* ---- Tutoring ---- */
+.tutor-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.tutor-card{
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:28px;
+  background:#fff;
+}
+.tutor-card .tag{
+  display:inline-block;
+  font-size:0.78rem;
+  color:var(--gold);
+  background:var(--gold-soft);
+  padding:4px 10px;
+  border-radius:3px;
+  margin-bottom:14px;
+}
+.tutor-card h3{
+  font-family:var(--serif);
+  font-size:1.25rem;
+  margin:0 0 10px;
+}
+.tutor-card p{
+  color:var(--ink-soft);
+  font-size:0.95rem;
+  margin:0 0 16px;
+}
+.tutor-card ul{
+  margin:0 0 20px;
+  padding-left:18px;
+  color:var(--ink-soft);
+  font-size:0.92rem;
+}
+.tutor-card li{margin-bottom:6px;}
+.tutor-cta{
+  display:inline-block;
+  font-size:0.88rem;
+  text-decoration:none;
+  color:var(--ink);
+  border-bottom:1px solid var(--gold);
+  padding-bottom:2px;
+}
+.tutor-cta:hover{color:var(--gold);}
+
+/* ---- Contact ---- */
+.contact-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+}
+.contact-form{display:flex; flex-direction:column; gap:14px;}
+.contact-form label{font-size:0.85rem; color:var(--ink-soft);}
+.contact-form input, .contact-form textarea{
+  font-family:var(--sans);
+  font-size:0.95rem;
+  padding:11px 12px;
+  border:1px solid var(--line);
+  border-radius:3px;
+  background:#fff;
+  color:var(--ink);
+}
+.contact-form textarea{min-height:110px; resize:vertical;}
+.contact-form button{
+  font-family:var(--sans);
+  font-size:0.92rem;
+  font-weight:500;
+  background:var(--ink);
+  color:#fff;
+  border:none;
+  padding:12px 20px;
+  border-radius:3px;
+  cursor:pointer;
+  width:fit-content;
+  transition:background .15s ease;
+}
+.contact-form button:hover{background:var(--accent);}
+.contact-direct p{color:var(--ink-soft); font-size:0.95rem;}
+.contact-direct a{
+  font-family:var(--serif);
+  font-size:1.05rem;
+  display:block;
+  margin:14px 0;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+  padding-bottom:4px;
+  width:fit-content;
+}
+.contact-direct a:hover{color:var(--accent); border-color:var(--accent);}
+
+footer{
+  max-width:1180px;
+  margin:80px auto 0;
+  padding:24px 40px 40px;
+  border-top:1px solid var(--line);
+  font-size:0.82rem;
+  color:var(--ink-soft);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:860px){
+  .topnav{padding:18px 24px; flex-wrap:wrap;}
+  .topnav ul{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    gap:14px;
+    margin-top:16px;
+  }
+  .topnav ul.open{display:flex;}
+  .nav-toggle{display:block;}
+  main{padding:48px 24px 80px;}
+  footer{padding:24px 24px 40px;}
+  .tutor-grid, .contact-row{grid-template-columns:1fr;}
+  .ledger-row{grid-template-columns:32px 1fr; row-gap:10px;}
+  .ledger-link{grid-column:2; justify-self:start;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;}
+}
+
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
