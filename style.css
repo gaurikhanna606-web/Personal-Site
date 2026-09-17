@@ -136,6 +136,21 @@ h2.section-title{
   margin:0 0 36px;
 }
 
+/* ---- Tutoring credentials panel ---- */
+.credentials{
+  border-left:2px solid var(--gold);
+  background:var(--gold-soft);
+  padding:20px 24px;
+  margin:0 0 40px;
+  border-radius:0 4px 4px 0;
+}
+.credentials p{
+  font-size:0.95rem;
+  color:var(--ink);
+  margin:0 0 12px;
+}
+.credentials p:last-child{margin-bottom:0;}
+
 /* ---- About page extras ---- */
 .about-body p{
   max-width:65ch;
